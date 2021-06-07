@@ -24,6 +24,12 @@ public class TestController {
     }
 
 
+    /**
+     * 发送
+     * @param topic
+     * @param sendData
+     * @return
+     */
     @RequestMapping("/sendMqtt")
     public String sendMqtt(String topic,String sendData) {
         mqttSender.sendToMqtt(topic, sendData);
